@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3223EDF420C28A1100B6F97A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223EDF320C28A1100B6F97A /* AppDelegate.swift */; };
+		3223EDF620C28A1100B6F97A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223EDF520C28A1100B6F97A /* ViewController.swift */; };
+		3223EDF920C28A1100B6F97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3223EDF720C28A1100B6F97A /* Main.storyboard */; };
+		3223EDFB20C28A1200B6F97A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3223EDFA20C28A1200B6F97A /* Assets.xcassets */; };
+		3223EDFE20C28A1200B6F97A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3223EDFC20C28A1200B6F97A /* LaunchScreen.storyboard */; };
+		3223EE0920C28A1200B6F97A /* yamibo_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223EE0820C28A1200B6F97A /* yamibo_iosTests.swift */; };
+		3223EE1420C28A1200B6F97A /* yamibo_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223EE1320C28A1200B6F97A /* yamibo_iosUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3223EE0520C28A1200B6F97A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3223EDE820C28A1100B6F97A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3223EDEF20C28A1100B6F97A;
+			remoteInfo = "yamibo-ios";
+		};
+		3223EE1020C28A1200B6F97A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3223EDE820C28A1100B6F97A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3223EDEF20C28A1100B6F97A;
+			remoteInfo = "yamibo-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3223EDF020C28A1100B6F97A /* yamibo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yamibo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3223EDF320C28A1100B6F97A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3223EDF520C28A1100B6F97A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3223EDF820C28A1100B6F97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3223EDFA20C28A1200B6F97A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3223EDFD20C28A1200B6F97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3223EDFF20C28A1200B6F97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3223EE0420C28A1200B6F97A /* yamibo-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yamibo-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3223EE0820C28A1200B6F97A /* yamibo_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yamibo_iosTests.swift; sourceTree = "<group>"; };
+		3223EE0A20C28A1200B6F97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3223EE0F20C28A1200B6F97A /* yamibo-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yamibo-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3223EE1320C28A1200B6F97A /* yamibo_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yamibo_iosUITests.swift; sourceTree = "<group>"; };
+		3223EE1520C28A1200B6F97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3223EDED20C28A1100B6F97A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3223EE0120C28A1200B6F97A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3223EE0C20C28A1200B6F97A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3223EDE720C28A1100B6F97A = {
+			isa = PBXGroup;
+			children = (
+				3223EDF220C28A1100B6F97A /* yamibo-ios */,
+				3223EE0720C28A1200B6F97A /* yamibo-iosTests */,
+				3223EE1220C28A1200B6F97A /* yamibo-iosUITests */,
+				3223EDF120C28A1100B6F97A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3223EDF120C28A1100B6F97A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3223EDF020C28A1100B6F97A /* yamibo-ios.app */,
+				3223EE0420C28A1200B6F97A /* yamibo-iosTests.xctest */,
+				3223EE0F20C28A1200B6F97A /* yamibo-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3223EDF220C28A1100B6F97A /* yamibo-ios */ = {
+			isa = PBXGroup;
+			children = (
+				3223EDF320C28A1100B6F97A /* AppDelegate.swift */,
+				3223EDF520C28A1100B6F97A /* ViewController.swift */,
+				3223EDF720C28A1100B6F97A /* Main.storyboard */,
+				3223EDFA20C28A1200B6F97A /* Assets.xcassets */,
+				3223EDFC20C28A1200B6F97A /* LaunchScreen.storyboard */,
+				3223EDFF20C28A1200B6F97A /* Info.plist */,
+			);
+			path = "yamibo-ios";
+			sourceTree = "<group>";
+		};
+		3223EE0720C28A1200B6F97A /* yamibo-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				3223EE0820C28A1200B6F97A /* yamibo_iosTests.swift */,
+				3223EE0A20C28A1200B6F97A /* Info.plist */,
+			);
+			path = "yamibo-iosTests";
+			sourceTree = "<group>";
+		};
+		3223EE1220C28A1200B6F97A /* yamibo-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3223EE1320C28A1200B6F97A /* yamibo_iosUITests.swift */,
+				3223EE1520C28A1200B6F97A /* Info.plist */,
+			);
+			path = "yamibo-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3223EDEF20C28A1100B6F97A /* yamibo-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3223EE1820C28A1200B6F97A /* Build configuration list for PBXNativeTarget "yamibo-ios" */;
+			buildPhases = (
+				3223EDEC20C28A1100B6F97A /* Sources */,
+				3223EDED20C28A1100B6F97A /* Frameworks */,
+				3223EDEE20C28A1100B6F97A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "yamibo-ios";
+			productName = "yamibo-ios";
+			productReference = 3223EDF020C28A1100B6F97A /* yamibo-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3223EE0320C28A1200B6F97A /* yamibo-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3223EE1B20C28A1200B6F97A /* Build configuration list for PBXNativeTarget "yamibo-iosTests" */;
+			buildPhases = (
+				3223EE0020C28A1200B6F97A /* Sources */,
+				3223EE0120C28A1200B6F97A /* Frameworks */,
+				3223EE0220C28A1200B6F97A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3223EE0620C28A1200B6F97A /* PBXTargetDependency */,
+			);
+			name = "yamibo-iosTests";
+			productName = "yamibo-iosTests";
+			productReference = 3223EE0420C28A1200B6F97A /* yamibo-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3223EE0E20C28A1200B6F97A /* yamibo-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3223EE1E20C28A1200B6F97A /* Build configuration list for PBXNativeTarget "yamibo-iosUITests" */;
+			buildPhases = (
+				3223EE0B20C28A1200B6F97A /* Sources */,
+				3223EE0C20C28A1200B6F97A /* Frameworks */,
+				3223EE0D20C28A1200B6F97A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3223EE1120C28A1200B6F97A /* PBXTargetDependency */,
+			);
+			name = "yamibo-iosUITests";
+			productName = "yamibo-iosUITests";
+			productReference = 3223EE0F20C28A1200B6F97A /* yamibo-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3223EDE820C28A1100B6F97A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = public;
+				TargetAttributes = {
+					3223EDEF20C28A1100B6F97A = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					3223EE0320C28A1200B6F97A = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 3223EDEF20C28A1100B6F97A;
+					};
+					3223EE0E20C28A1200B6F97A = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 3223EDEF20C28A1100B6F97A;
+					};
+				};
+			};
+			buildConfigurationList = 3223EDEB20C28A1100B6F97A /* Build configuration list for PBXProject "yamibo-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3223EDE720C28A1100B6F97A;
+			productRefGroup = 3223EDF120C28A1100B6F97A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3223EDEF20C28A1100B6F97A /* yamibo-ios */,
+				3223EE0320C28A1200B6F97A /* yamibo-iosTests */,
+				3223EE0E20C28A1200B6F97A /* yamibo-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3223EDEE20C28A1100B6F97A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3223EDFE20C28A1200B6F97A /* LaunchScreen.storyboard in Resources */,
+				3223EDFB20C28A1200B6F97A /* Assets.xcassets in Resources */,
+				3223EDF920C28A1100B6F97A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3223EE0220C28A1200B6F97A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3223EE0D20C28A1200B6F97A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3223EDEC20C28A1100B6F97A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3223EDF620C28A1100B6F97A /* ViewController.swift in Sources */,
+				3223EDF420C28A1100B6F97A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3223EE0020C28A1200B6F97A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3223EE0920C28A1200B6F97A /* yamibo_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3223EE0B20C28A1200B6F97A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3223EE1420C28A1200B6F97A /* yamibo_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3223EE0620C28A1200B6F97A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3223EDEF20C28A1100B6F97A /* yamibo-ios */;
+			targetProxy = 3223EE0520C28A1200B6F97A /* PBXContainerItemProxy */;
+		};
+		3223EE1120C28A1200B6F97A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3223EDEF20C28A1100B6F97A /* yamibo-ios */;
+			targetProxy = 3223EE1020C28A1200B6F97A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3223EDF720C28A1100B6F97A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3223EDF820C28A1100B6F97A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3223EDFC20C28A1200B6F97A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3223EDFD20C28A1200B6F97A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3223EE1620C28A1200B6F97A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3223EE1720C28A1200B6F97A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3223EE1920C28A1200B6F97A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "yamibo-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cleoreo.yamibo-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3223EE1A20C28A1200B6F97A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "yamibo-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cleoreo.yamibo-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3223EE1C20C28A1200B6F97A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "yamibo-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cleoreo.yamibo-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yamibo-ios.app/yamibo-ios";
+			};
+			name = Debug;
+		};
+		3223EE1D20C28A1200B6F97A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "yamibo-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cleoreo.yamibo-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yamibo-ios.app/yamibo-ios";
+			};
+			name = Release;
+		};
+		3223EE1F20C28A1200B6F97A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "yamibo-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cleoreo.yamibo-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "yamibo-ios";
+			};
+			name = Debug;
+		};
+		3223EE2020C28A1200B6F97A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "yamibo-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cleoreo.yamibo-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "yamibo-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3223EDEB20C28A1100B6F97A /* Build configuration list for PBXProject "yamibo-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3223EE1620C28A1200B6F97A /* Debug */,
+				3223EE1720C28A1200B6F97A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3223EE1820C28A1200B6F97A /* Build configuration list for PBXNativeTarget "yamibo-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3223EE1920C28A1200B6F97A /* Debug */,
+				3223EE1A20C28A1200B6F97A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3223EE1B20C28A1200B6F97A /* Build configuration list for PBXNativeTarget "yamibo-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3223EE1C20C28A1200B6F97A /* Debug */,
+				3223EE1D20C28A1200B6F97A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3223EE1E20C28A1200B6F97A /* Build configuration list for PBXNativeTarget "yamibo-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3223EE1F20C28A1200B6F97A /* Debug */,
+				3223EE2020C28A1200B6F97A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3223EDE820C28A1100B6F97A /* Project object */;
+}
