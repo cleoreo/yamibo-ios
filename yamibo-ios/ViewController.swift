@@ -38,6 +38,13 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
         let photoSwipeUI = WKUserScript(source: photoSwipeUIScriptSource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
         contentController.addUserScript(photoSwipeUI)
 
+        // add translation script
+        guard let translationScriptPath = Bundle.main.path(forResource: "jquery.s2t.min", ofType: "js", inDirectory: "js"),
+            let translationScriptSource = try? String(contentsOfFile: translationScriptPath) else { return }
+        
+        let translation = WKUserScript(source: translationScriptSource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+        contentController.addUserScript(translation)
+        
         // add desktop script
         guard let desktopScriptPath = Bundle.main.path(forResource: "desktop", ofType: "js", inDirectory: "js"),
             let desktopScriptSource = try? String(contentsOfFile: desktopScriptPath) else { return }
@@ -53,10 +60,10 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
         contentController.addUserScript(mobile)
         
         // add mobile script
-        let viewportScript = "jQuery('head').append('<meta name=\"viewport\" content=\"initial-scale=1.0,maximum-scale=1,width=device-width,user-scalable=0\">');"
-        
-        let userScript = WKUserScript(source: viewportScript, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
-        contentController.addUserScript(userScript)
+//        let viewportScript = "jQuery('head').append('<meta name=\"viewport\" content=\"initial-scale=1,maximum-scale=1,width=device-width,user-scalable=0\">');"
+//
+//        let userScript = WKUserScript(source: viewportScript, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+//        contentController.addUserScript(userScript)
         
         
 
@@ -75,7 +82,11 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
         
         mainWebView.uiDelegate = self
         mainWebView.navigationDelegate = self
+        mainWebView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        mainWebView.scrollView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     
+        mainWebView.customUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1"
+        
         // add progress bar
         progressView = UIProgressView(progressViewStyle: .default)
         progressView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
