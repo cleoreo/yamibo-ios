@@ -14,7 +14,31 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
     var mainWebView: WKWebView!
     var refreshControl: UIRefreshControl!
     var progressView: UIProgressView!
-  
+
+    // spinner
+    func showBlurLoader(){
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        activityIndicator.startAnimating()
+        
+        blurEffectView.contentView.addSubview(activityIndicator)
+        activityIndicator.center = blurEffectView.contentView.center
+        
+        self.view.addSubview(blurEffectView)
+    }
+    
+    func removeBluerLoader(){
+        self.view.subviews.flatMap {  $0 as? UIVisualEffectView }.forEach {
+            $0.removeFromSuperview()
+        }
+    }
+    
+    // webview
     private func setupWebView() {
         let contentController = WKUserContentController()
         
@@ -38,6 +62,13 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
         let photoSwipeUI = WKUserScript(source: photoSwipeUIScriptSource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
         contentController.addUserScript(photoSwipeUI)
 
+        // add font awesome script
+        guard let fontAwesomeScriptPath = Bundle.main.path(forResource: "fontawesome-all.min", ofType: "js", inDirectory: "js"),
+            let fontAwesomeScriptSource = try? String(contentsOfFile: fontAwesomeScriptPath) else { return }
+        
+        let fontAwesome = WKUserScript(source: fontAwesomeScriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        contentController.addUserScript(fontAwesome)
+        
         // add translation script
         guard let translationScriptPath = Bundle.main.path(forResource: "jquery.s2t.min", ofType: "js", inDirectory: "js"),
             let translationScriptSource = try? String(contentsOfFile: translationScriptPath) else { return }
@@ -58,15 +89,8 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
         
         let mobile = WKUserScript(source: mobileScriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
         contentController.addUserScript(mobile)
+    
         
-        // add mobile script
-//        let viewportScript = "jQuery('head').append('<meta name=\"viewport\" content=\"initial-scale=1,maximum-scale=1,width=device-width,user-scalable=0\">');"
-//
-//        let userScript = WKUserScript(source: viewportScript, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
-//        contentController.addUserScript(userScript)
-        
-        
-
         
         let config = WKWebViewConfiguration()
         config.userContentController = contentController
@@ -97,7 +121,8 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
         self.mainWebView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil);
         
         self.view.addSubview(self.mainWebView)
-    }
+        
+}
     
     
     override func viewDidLoad() {
@@ -191,6 +216,12 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
         if keyPath == "estimatedProgress" {
             if let progress = (change[NSKeyValueChangeKey.newKey] as AnyObject).floatValue {
                 progressView.progress = progress;
+                if progress > 0.5 {
+                    self.removeBluerLoader()
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+//                        self.removeBluerLoader()
+//                    }
+                }
             }
             return
         }
@@ -201,6 +232,11 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         progressView.isHidden = false
+        self.showBlurLoader()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+//             self.showBlurLoader()
+//        }
+       
     }
 
 }
