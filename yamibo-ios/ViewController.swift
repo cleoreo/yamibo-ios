@@ -19,7 +19,8 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
     func showBlurLoader(){
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        blurEffectView.frame = CGRect( x: 0, y: statusBarHeight, width: view.bounds.maxX, height: view.bounds.maxY - statusBarHeight)
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
