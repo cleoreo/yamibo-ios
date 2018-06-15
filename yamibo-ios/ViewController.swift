@@ -217,7 +217,7 @@ class ViewController: UIViewController , WKUIDelegate, WKNavigationDelegate {
         if keyPath == "estimatedProgress" {
             if let progress = (change[NSKeyValueChangeKey.newKey] as AnyObject).floatValue {
                 progressView.progress = progress;
-                if progress > 0.5 {
+                if progress > 0.6 {
                     self.removeBluerLoader()
 //                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
 //                        self.removeBluerLoader()
