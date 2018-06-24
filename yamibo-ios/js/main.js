@@ -260,12 +260,13 @@ function postPageSetUp () {
                            jQuery('.postmessage a').each(function () {
                                                          var href = jQuery(this).attr('href');
                                                          if (/\bbbs.yamibo.com\b/.test(href)) {
-                                                         if (/\bmobile=yes\b/.test(href) || /\bmobile=2\b/.test(href)) {
+                                                         if (/\bmobile=yes\b/.test(href) || /\bmobile=2\b/.test(href) || /\bmobile=no\b/.test(href)) {
                                                          href = href.replace('mobile=yes', 'mobile=1');
+                                                         href = href.replace('mobile=no', 'mobile=1');
                                                          href = href.replace('mobile=2', 'mobile=1');
                                                          } else {
                                                          if (href.split('?').length > 1) {
-                                                         href = href + '&mobile=1';
+                                                         href = href.split('?')[0] + '?mobile=1&' + href.split('?')[1];
                                                          } else {
                                                          if (href.slice(-1) === "/") {
                                                          href = href + "forum.php?mobile=1";
@@ -507,15 +508,15 @@ function themeSetting () {
 
 function fontSizeSetting () {
     if (window.localStorage.getItem("ftsize") === "S") {
-        jQuery('body').css('font-size', '8pt');
-        jQuery('html').css('font-size', '8pt');
-    } else if (window.localStorage.getItem("ftsize") === "L") {
         jQuery('body').css('font-size', '12pt');
         jQuery('html').css('font-size', '12pt');
+    } else if (window.localStorage.getItem("ftsize") === "L") {
+        jQuery('body').css('font-size', '16pt');
+        jQuery('html').css('font-size', '16pt');
     } else {
         window.localStorage.setItem("ftsize", "M");
-        jQuery('body').css('font-size', '10pt');
-        jQuery('html').css('font-size', '10pt');
+        jQuery('body').css('font-size', '14pt');
+        jQuery('html').css('font-size', '14pt');
     }
     
     if (window.localStorage.getItem("ftsize")) {
@@ -601,7 +602,7 @@ function openGallery (index, items) {
     index: index,
     loadingIndicatorDelay: 500,
     errorMsg: '<div class="pswp__error-msg">此圖片無法載入</div>',
-    shareButtons: [{id: 'download', label: '下載', url: '{{raw_image_url}}', download: true}],
+    shareEl: false,
     preload: [1,3]
     };
     
